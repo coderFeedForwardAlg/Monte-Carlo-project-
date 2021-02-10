@@ -1,0 +1,67 @@
+// for prosesing 
+import java.lang.Math;
+  int Apeople = 9;
+  int ASPM = 20;
+  int aAcur = 20;
+  int Bpeole = 14;
+  int BSPM = 125; 
+  int bAcur = 99; 
+  
+
+void setup(){
+  size(1,1);
+  int totSumA = 0;
+  int totSumB = 0;
+  
+  int aSum =0;
+  for(int j = 0; j < 100; j++){
+      for(int i = 0; i < Apeople * ASPM; i++){
+        int randomNumWithin100 = (int) (Math.random() * 700);
+        if(randomNumWithin100 < aAcur){
+          aSum++;
+        }
+      }
+      //System.out.println(aSum);
+      
+        int bSum = 0;
+        for(int i = 0; i < Bpeole * BSPM; i++){
+          int randomNumWithin100 = (int) (Math.random() * 700);
+          if(randomNumWithin100 < bAcur){
+            bSum++;
+          }
+      
+        }
+      if(aSum > bSum){
+        totSumA++;
+      }
+      if(aSum < bSum){
+        totSumB ++ ;
+      }
+
+  }
+        if(totSumA > totSumB){
+        System.out.println("a wins");
+      }else if(totSumA < totSumB){
+        System.out.println("b wins");
+      }else{
+        System.out.println("no winner");
+      }
+  
+}
+
+
+
+void draw(){
+
+
+}
+
+
+
+//feal = 2d array of block objects 
+
+// groups have size verosoty x pos y pos ,snoballs per min
+// they  move one space or do combat if next to a nother tile 
+
+// group pawer is detrmand by size verosoty, snoballs per min  
+// and has a =or- based on train/block
