@@ -1,4 +1,4 @@
-// for prosesing 
+// for prosesing IDE
 import java.lang.Math;
   int Apeople = 9;
   int ASPM = 20;
